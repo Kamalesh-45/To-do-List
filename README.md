@@ -16,10 +16,9 @@ This is a simple and secure To-do List web application that allows users to sign
 - Firebase Authentication
 
 ## 📱 Screenshots
-
-| Login Page | Homepage | Task Form |  Nav Bar | Filter Dropdown |
-|------------|----------|-----------|----------|-----------------|
-| ![Login](ToDo/img/img1.png) | ![Home](ToDo/img/Screenshot1.png) | ![Form](lib/assets/task_form.jpg) | ![Nav](lib/assets/nav_bar.jpg) | ![Filter](lib/assets/filter_button.jpg) |
+| Login Page | Homepage | Task Form |
+|------------|----------|-----------|
+| ![Login](ToDo/img/img1.png) | ![Home](ToDo/img/second.png) | ![Form](ToDo/img/Screenshot1.png)|
 
 ---
 
