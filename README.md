@@ -17,7 +17,7 @@ This is a simple and secure To-do List web application that allows users to sign
 
 ## 📐 Architecture Diagram
 
-![login page](img/Screenshot 2025-06-29 170029.png)
+![login page](img/img1.png)
 ![login page](ToDo/img/Screenshot 2025-06-29 170029.png)
 ![login page](architecture.png)
 ![login page](architecture.png)
