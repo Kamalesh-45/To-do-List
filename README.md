@@ -30,3 +30,4 @@ This is a simple and secure To-do List web application that allows users to sign
 > In the video, I explain the structure, features, and working of the app.
 
 ---
+This project is a part of a hackathon run by https://www.katomaran.com
