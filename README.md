@@ -19,7 +19,7 @@ This is a simple and secure To-do List web application that allows users to sign
 
 | Login Page | Homepage | Task Form |  Nav Bar | Filter Dropdown |
 |------------|----------|-----------|----------|-----------------|
-| ![Login](lib/assets/login_page.jpg) | ![Home](lib/assets/homepage.jpg) | ![Form](lib/assets/task_form.jpg) | ![Nav](lib/assets/nav_bar.jpg) | ![Filter](lib/assets/filter_button.jpg) |
+| ![Login](ToDo/img/Screenshot2025-06-29170113.png) | ![Home](lib/assets/homepage.jpg) | ![Form](lib/assets/task_form.jpg) | ![Nav](lib/assets/nav_bar.jpg) | ![Filter](lib/assets/filter_button.jpg) |
 
 ---
 
