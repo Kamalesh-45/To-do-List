@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo-List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Todo-List</h1>
+    <div id="errorMessage" class="error-message"></div>
+    <input type="text" id="todoInput" class="todo-input" placeholder="Enter a task...">
+    <button id="addBtn" class="add-btn">Add Task</button>
+    <ul id="todoList" class="todo-list"></ul>
+    <div id="pagination" class="pagination"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- Firebase Session Check + Logout -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBCVlK5L1ZhiDaRDbaRTrMC0i6WhEmjWe0",
+      authDomain: "to-do-list-85033.firebaseapp.com",
+      projectId: "to-do-list-85033",
+      storageBucket: "to-do-list-85033.firebasestorage.app",
+      messagingSenderId: "610847826886",
+      appId: "1:610847826886:web:c2cf194ad52f0de60f48c7"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Check if user is logged in
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        window.location.href = "index.html";
+      } else {
+        // Show greeting
+        const name = user.displayName;
+        const email = user.email;
+
+        const greeting = document.createElement("p");
+        greeting.textContent = `Hello, ${name} (${email})`;
+        greeting.style.marginBottom = "10px";
+        document.querySelector(".container").prepend(greeting);
+
+        // Add logout button
+        const logoutBtn = document.createElement("button");
+        logoutBtn.textContent = "Logout";
+        logoutBtn.className = "add-btn";
+        logoutBtn.style.marginTop = "20px";
+        logoutBtn.onclick = () => {
+          signOut(auth).then(() => {
+            localStorage.removeItem("user");
+            window.location.href = "login.html";
+          });
+        };
+        document.querySelector(".container").appendChild(logoutBtn);
+      }
+    });
+  </script>
+</body>
+</html>
